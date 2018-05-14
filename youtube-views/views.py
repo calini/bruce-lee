@@ -14,4 +14,4 @@ request_link = 'https://www.googleapis.com/youtube/v3/videos'
 
 resp = requests.get(request_link, params={'id': sys.argv[1], 'key': api_key, 'part': 'statistics'})
 view_count = int(json.loads(resp.content)['items'][0]['statistics']['viewCount'])
-print(view_count)
+print("%d views" % view_count)
